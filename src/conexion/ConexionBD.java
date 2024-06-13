@@ -3,11 +3,11 @@ package conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+// proyecto correcto 
 public class ConexionBD {
 	/* Propiedades de la conexión	 */
 	// Cambiar el dato para conectar a otra base de datos
-	private static String database="biblioteca";
+	private static String database="biblioteca"; // base de datos correcta
 	private static String usuario="root";
 	private static String contrasena="";
 	private static String url="jdbc:mariadb://localhost/"+database;
@@ -30,6 +30,7 @@ public class ConexionBD {
 			//Inicializamos la conexión a la base de datos
 			// Registrar el driver. Previamente habrá que haber añadido el driver al proyecto (Build Path)
 		
+			// driver registrado y en path de construcción
 			Class.forName("org.mariadb.jdbc.Driver");
 			// Obtenemos el objeto Connection de la clase DriverManager. Lanzará una excepción SQL si no
 			// se puede conectar.

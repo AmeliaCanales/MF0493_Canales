@@ -26,12 +26,13 @@ public static void main(String[] args) {
 			
 		
 		//Paso 3.Ejecutar la sentencia
-		resultado = sentencia.executeQuery("select * from editoriales");
+		resultado = sentencia.executeQuery("select * from editoriales"); // consulta correcta
 		System.out.println("Cod. Editorial \t Nombre \t Año");
 		
 				
 		//Paso 4. Recorrer el resultado
 		while (resultado.next()) {
+			// columnas correctas y bien recuperadas
 			int codEditorial = resultado.getInt("codEditorial");
 			String nombre = resultado.getString("nombre");
 			int anio = resultado.getInt("anio");
@@ -53,7 +54,7 @@ public static void main(String[] args) {
 		// Liberamos la conexión 
 		conexion.desconectar(); 
 		
-
+		// repositorio correcto
 	}
 
 }
